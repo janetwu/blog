@@ -1,3 +1,104 @@
-.content{
-  width: auto;
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+display: block;
+}
+a {
+color: #0e92dc;
+text-decoration: none;
+border-bottom: 2px solid transparent;
+cursor: pointer;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-o-transition: 0.2s;
+transition: 0.2s;
+-webkit-transition-property: background, border, color, opacity;
+-moz-transition-property: background, border, color, opacity;
+-o-transition-property: background, border, color, opacity;
+transition-property: background, border, color, opacity;
+}
+.header {
+overflow: hidden;
+line-height: 4.25em;
+color: white;
+text-align: center;
+background: #86bb52;
+}
+.row {
+position: relative;
+margin: 0 auto;
+padding: 0 1.5em;
+max-width: 44em;
+overflow: hidden;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.header>.row {
+padding: 0;
+}
+.header-link, .header-title {
+float: left;
+padding: 0 1.5em;
+padding: 0 1.5rem;
+line-height: inherit;
+color: inherit;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+.header-link {
+position: relative;
+font-size: 1.125em;
+border: 0;
+}
+.header-link.active:before {
+content: '';
+position: absolute;
+left: 50%;
+bottom: 0;
+width: 0;
+height: 0;
+margin-left: -5px;
+border: 5px solid transparent;
+border-bottom-color: white;
+pointer-events: none;
+}
+.header-title {
+margin: 0;
+font-family: PTSansBold, Helvetica, Arial, sans-serif;
+font-size: 1.375em;
+font-weight: bold;
+border: 0;
+}
+.header-menu {
+float: right;
+overflow: hidden;
+}
+.content {
+background: white;
+padding: 1.75em 0 1em;
+}
+.footer {
+padding: 1em 0;
+line-height: 2em;
+color: #777;
+}
+.footer-copy {
+float: left;
+}
+.footer-links {
+float: right;
+}
+.footer-link {
+float: left;
+padding: 0 .7em;
+font-family: PTSansBold, Helvetica, Arial, sans-serif;
+font-size: .875em;
+font-weight: bold;
+color: white;
+background: #fac549;
+border: 0;
+border-radius: 2px;
+}
+.footer-git {
+background: #4183c4;
 }
