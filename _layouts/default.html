@@ -6,8 +6,29 @@
 　　<link rel="stylesheet" href="../style.css"/>
 </head>
 <body>
- 
+ <header class="header" id="top">
+    <nav class="row">
+      <a class="header-title" href="/">Janet | on the way</a>
+      <div class="header-menu">
+        <a class="header-link" href="/">About</a>
+        <a class="header-link active" href="/projects/">Projects</a>
+        <a class="header-link" href="/articles/">Articles</a>
+        <a class="header-link" href="/books/">Books</a>
+      </div>
+    </nav>
+  </header>
+  <section class="content"> 
 　　{{ content }}
-
+  </section>
+  <footer class="footer">
+    <div class="row">
+      <p class="footer-copy">© 2013–2014 Janet Wu</p>
+      <p class="footer-links">
+        <a href="mailto:janetwume@gmail.com" class="footer-link">Email</a>
+        <a href="https://github.com/janetwu" class="footer-link footer-git">GitHub</a>
+        
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
