@@ -28,7 +28,7 @@ transition-property: background, border, color, opacity;
 .header {
 overflow: hidden;
 line-height: 4.25em;
-color: white;
+color: gray;
 text-align: center;
 background: #c0e4e4;
 }
