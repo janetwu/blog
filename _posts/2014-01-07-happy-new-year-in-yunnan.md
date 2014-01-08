@@ -1,6 +1,6 @@
 ---
 layout: post
-image: /assets/img/yunnan05.jpg
+image: /img/yunnan05.jpg
 title: 云南跨年游
 tags: travel
 ---
