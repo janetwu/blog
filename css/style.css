@@ -77,8 +77,7 @@ article .meta {
 }
 .main-nav{
 	float: right;
-	position: relative;
-	top: 33px;
+	
 }
 .main-nav li{
 	display: inline-block;	
