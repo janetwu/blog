@@ -4,12 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title> {% if page.title %} {{ page.title }} | {% endif %} Janet Wu, Web Front-end Developer. </title>
-  <link rel="stylesheet" href="/css/normalize.css" />
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/font-awesome.min.css">  
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-
-<p>coming soon...  </p>
+  <header>
+    <div class="top boxed">
+      <h1>
+        <a class="logo" href="/" title="Janet Wu"><img src="/img/logo.png"></a>
+        <span class="description">less is more 越简单,越快乐</span>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="/archive/" title="Archive"><i class="fa fa-list-ul"></i></a></li>
+          <li><a href="/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
+          <li><a href="/books/" title="Books"><i class="fa fa-book"></i></a></li>
+          <li><a href="/" title="Photos"><i class="fa fa-camera"></i></a></li>
+          <li><a href="/about/" title="About"><i class="fa fa-user"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="main boxed">
+    
+      {{ content }}
+      
+  </div>
+  <footer class="boxed">
+    <span>© 2014 janet wu | powered by jekyll</span>
+    <a href=""><i class="fa fa-envelope"></i></a>
+    <a href=""><i class="fa fa-weibo"></i></a>
+    <a href=""><i class="fa fa-github"></i></a>
+  </footer>
 </body>
 </html>

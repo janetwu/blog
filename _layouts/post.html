@@ -4,48 +4,47 @@ comments: true
 ---
 
 <article>
-  <section class="title">
-    <h2>
-      <a href="{{ page.url }}">{{ page.title }}</a>
-    </h2> 
-  </section>
-  <section class="meta">
-    <span class="date"><time datetime="{{ page.date| date: "%Y-%m-%d" }}">{{ page.date| date: "%Y-%m-%d" }}</time></span>
-    {% for tag in page.tags %}
-      <span class="tag"><a href="/tags/#{{ tag }}">#{{ tag }}</a></span>
-    {% endfor %}
-  </section>
-  <section class="post">
-    {{ content }}
-  </section>  
-  <div class="divider">
-    {% if page.previous %}
-      <span>
-        <a href="{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-chevron-left"></i></a>
-      </span>
-      {% else %}
-      <span>
-        <i class="fa fa-circle"></i>
-      </span>
-    {% endif %}
-    <span><a href="javascript:leave_comment();" id="leave_comment_link" style=""><i class="fa fa-comment-o"></i></a></span>
-    <span><a href="javascript:collapse_comment();" id="collapse_comment_link" style="display: none;"><i class="fa fa-chevron-up"></i></a></span>
-    {% if page.next %}
-      <span>
-        <a href="{{ page.next.url }}" title="{{ page.next.title }}"><i class="fa fa-chevron-right"></i></a>
-      </span>
-      {% else %}
-      <span>
-        <i class="fa fa-circle"></i>
-      </span>
-    {% endif %}
+  <h2>
+    <a href="{{ post.url }}" class="post-title">{{ page.title }}</a>
+  </h2>
+  <p class="post-meta">
+    <span class="post-date"><i class="fa fa-clock-o"></i> {{ page.date| date: "%Y-%m-%d" }}</span>
+    <span class="post-tags">
+      <i class="fa fa-tag"></i>
+      {% for tag in page.tags %}
+        <a href="/tags/#{{ tag }}">#{{ tag }}</a>
+      {% endfor %}
+    </span>
+  </p>
+  <div class="post-main">
+    {{ page.content }}
   </div>
-  <section class="comment">
-    <div id="disqus_thread"></div>
-    
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  </section>
 </article>
+<div class="divider">
+  {% if page.previous %}
+  <span>
+    <a href="{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-chevron-left"></i></a>
+  </span>
+  {% else %}
+  <span title="end">
+    <i class="fa fa-circle"></i>
+  </span>
+  {% endif %}
+  <span><a class="comment" href="javascript:leave_comment();" id="leave_comment_link" title="leave a comment"><i class="fa fa-comment-o"></i></a></span>
+  <span><a class="comment" href="javascript:collapse_comment();" id="collapse_comment_link" style="display: none;"><i class="fa fa-chevron-up"></i></a></span>
+  {% if page.next %}
+  <span>
+    <a href="{{ page.next.url }}" title="{{ page.next.title }}"><i class="fa fa-chevron-right"></i></a>
+  </span>
+  {% else %}
+  <span title="end">
+    <i class="fa fa-circle"></i>
+  </span>
+  {% endif %}
+</div>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
        
@@ -68,3 +67,5 @@ comments: true
           });
       }; 
     </script>
+
+
