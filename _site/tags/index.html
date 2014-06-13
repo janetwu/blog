@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>  Janet Wu </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="janet wu">
+  <link rel="shortcut icon" href="/img/favicon5.ico" /> 
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+  <header>
+    
+    <div class="boxed">
+      <a class="logo" href="/" title="Janet Wu"><img src="/img/logo.png"></a>
+      <p class="description">less is more 越简单,越快乐</p>
+      <nav class="navbar">
+        <ul>
+          <li><a href="/archive/" title="Archive"><i class="fa fa-list-ul"></i></a></li>
+          <li><a href="/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
+          <li><a href="/books/" title="Books"><i class="fa fa-book"></i></a></li>
+          <li><a href="/" title="Photos"><i class="fa fa-camera"></i></a></li>
+          <li><a href="/about/" title="About"><i class="fa fa-user"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    
+  </header>
+
+  <div class="main boxed">
+    
+      <article>
+    <section class="title">
+        <h2>tags</h2>
+    </section>
+    <section>
+      <div id='tag_cloud'>
+      
+      <a href="#travel" title="travel" rel="2">travel</a>
+      
+      <a href="#阳朔" title="阳朔" rel="1">阳朔</a>
+      
+      <a href="#云南" title="云南" rel="1">云南</a>
+      
+      <a href="#css" title="css" rel="1">css</a>
+      
+      </div>
+       
+      <ul id='tag_list'>
+      
+        <li class='tag_item' id='travel'>
+          <span class='tag_name'>travel</span>
+          <span>
+            <ul>
+            
+              <li class='tag_post'><a href="/2014/01/07/happy-new-year-in-yunnan.html" title="云南跨年游">云南跨年游</a></li>
+            
+              <li class='tag_post'><a href="/2013/06/17/yangshuo.html" title="阳朔">阳朔</a></li>
+            
+            </ul>
+          </span>
+        </li>
+      
+        <li class='tag_item' id='阳朔'>
+          <span class='tag_name'>阳朔</span>
+          <span>
+            <ul>
+            
+              <li class='tag_post'><a href="/2013/06/17/yangshuo.html" title="阳朔">阳朔</a></li>
+            
+            </ul>
+          </span>
+        </li>
+      
+        <li class='tag_item' id='云南'>
+          <span class='tag_name'>云南</span>
+          <span>
+            <ul>
+            
+              <li class='tag_post'><a href="/2014/01/07/happy-new-year-in-yunnan.html" title="云南跨年游">云南跨年游</a></li>
+            
+            </ul>
+          </span>
+        </li>
+      
+        <li class='tag_item' id='css'>
+          <span class='tag_name'>css</span>
+          <span>
+            <ul>
+            
+              <li class='tag_post'><a href="/2014/06/13/reading-css-definition-guide.html" title="看《CSS权威指南》一点小感悟">看《CSS权威指南》一点小感悟</a></li>
+            
+            </ul>
+          </span>
+        </li>
+      
+      </ul>
+    </section>
+</article>
+
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.tagcloud.js"></script>
+<script language="javascript">
+	$.fn.tagcloud.defaults = {
+	  size: {start: 0.9, end: 2, unit: 'em'},
+	  color: {start: '#d0ecfa', end: '#3bb2eb'}
+	};
+
+	$(function () {
+	  $('#tag_cloud a').tagcloud();
+	});
+</script>
+
+ 
+      
+  </div>
+  <footer class="boxed">
+    <span>© 2014 janet wu | powered by jekyll</span>
+    <a href=""><i class="fa fa-envelope"></i></a>
+    <a href=""><i class="fa fa-weibo"></i></a>
+    <a href=""><i class="fa fa-github"></i></a>
+  </footer>
+</body>
+</html>

@@ -1,14 +1,11 @@
-<!--
-
+---
 layout: default
-
+---
 {% assign post = site.posts.first %}
 {% assign content = post.content %}
 
 <article>
-  <h2>
-    <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-  </h2>
+  <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
   <p class="post-meta">
     <span class="post-date"><i class="fa fa-clock-o"></i> {{ post.date| date: "%Y-%m-%d" }}</span>
     <span class="post-tags">
@@ -22,5 +19,3 @@ layout: default
     {{ post.content }}
   </div>
 </article>
--->
-coming soon...
