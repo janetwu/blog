@@ -52,7 +52,7 @@
 <p><img src='/img/yangshuo/guzhen.jpg' /></p>
 <p>兴坪有座山叫老寨山，山脚有家旅馆就叫老寨山旅馆，这里是有故事的。旅馆的主人是十几年前来兴坪旅行的日本人，当时在村民的帮助下探险登上老寨山，发现竟有如此美景无不为之动容，那时，他就做了个决定，留在那里，无偿修建老寨山登山路和山顶观景台。他确实爱上了这个地方，用余生守候着。</p><p>我没有刻意寻找老寨山，但是偶遇了，看到了旅馆的挂牌，才发现是老寨山。</p>
 <p><img src='/img/yangshuo/lvguan.jpg' /></p>
-<p>都到登山入口了，为什么不上去瞧瞧呢？</p><p>石阶因为是不规则石头堆砌而成的，加上又颇为陡峭，而我又不是经常登山的人，几乎想放弃但是心又不甘，最后硬着头终于到达山顶。</p><p>在山顶，放眼望去，美不胜收，心里感叹，还好我没放弃，这是我这次旅行最大的收获。</p>
+<p>都到登山入口了，为什么不上去瞧瞧呢？</p><p>石阶因为是不规则石头堆砌而成的，加上又颇为陡峭，而我又不是经常登山的人，几乎想放弃但是心又不甘，最后硬着头皮终于到达山顶。</p><p>在山顶，放眼望去，美不胜收，心里感叹，还好我没放弃，这是我这次旅行最大的收获。</p>
 <p><img src='/img/yangshuo/lzs.jpg' /></p>
 <p>我这个好奇宝宝终于尝试了第一次一个人旅行，总算平安归来，感恩。下次再来一次一个人的旅行？嗯，不用了，尝试过就好，你不知道，从山顶看到这样的美，多想和人分享。</p>
   </div>
@@ -77,25 +77,26 @@
 <script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
 <script type="text/javascript">
        
-      var disqus_shortname = 'janetwu';
+  var disqus_shortname = 'janetwu';
 
-      function leave_comment() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          $("#leave_comment_link").css("display", "none");
-          $("#collapse_comment_link").css("display", "");
-      };
-      function collapse_comment() {
-          // document.getElementById("disqus_thread").innerHTML = '';
-          $("#disqus_thread").slideUp(400, function() {
-              $("#disqus_thread").empty();
-              $("#leave_comment_link").css("display", "");
-              $("#collapse_comment_link").css("display", "none");
-              $("#disqus_thread").css("display", "");
-          });
-      }; 
-    </script>
+  function leave_comment() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      $("#leave_comment_link").css("display", "none");
+      $("#collapse_comment_link").css("display", "");
+  };
+  function collapse_comment() {
+      // document.getElementById("disqus_thread").innerHTML = '';
+      $("#disqus_thread").slideUp(400, function() {
+          $("#disqus_thread").empty();
+          $("#leave_comment_link").css("display", "");
+          $("#collapse_comment_link").css("display", "none");
+          $("#disqus_thread").css("display", "");
+      });
+  }; 
+</script>
+
 
 
 
@@ -107,5 +108,15 @@
     <a href=""><i class="fa fa-weibo"></i></a>
     <a href=""><i class="fa fa-github"></i></a>
   </footer>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51907563-1', 'janetwu.info');
+  ga('send', 'pageview');
+
+</script>
 </body>
 </html>
