@@ -2,7 +2,6 @@
 layout: post
 title: 看《CSS权威指南》一点小感悟
 tags: css
-pgyments: true
 ---
 <blockquote>
 	<p>
