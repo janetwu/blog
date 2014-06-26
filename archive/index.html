@@ -3,8 +3,8 @@ layout: default
 ---
 
 <article>
-    <h2>archive</h2>
-    <section>
+    <h1>Archive</h1>
+    <nav class="archive-list">
     {% for post in site.posts  %}
         {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
         {% capture this_month %}{{ post.date | date: "%-m" }}{% endcapture %}
@@ -12,9 +12,9 @@ layout: default
         {% capture next_month %}{{ post.previous.date | date: "%-m" }}{% endcapture %}
 
         {% if forloop.first %}
-        <h2 class="year">{{this_year}}</h2>
-        <h3 class="month">{{ this_month }}月</h3>
-        <ul class="article-list">
+        <h2>{{this_year}}</h2>
+        <h3>{{ this_month }}月</h3>
+        <ul>
         {% endif %}
 
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
@@ -24,21 +24,19 @@ layout: default
         {% else %}
             {% if this_year != next_year %}
             </ul>
-            <h2 class="year">{{next_year}}</h2>
-            <h3 class="month">{{ next_month }}月</h3>
-            <ul class="article-list">
+            <h2>{{next_year}}</h2>
+            <h3>{{ next_month }}月</h3>
+            <ul>
             {% else %}    
                 {% if this_month != next_month %}
                 </ul>
-                <h3 class="month">{{ next_month }}月</h3>
-                <ul class="article-list">
+                <h3>{{ next_month }}月</h3>
+                <ul>
                 {% endif %}
             {% endif %}
         {% endif %}
     {% endfor %}
-    </section>
+    </nav>
 
 </article>
 
-
- 

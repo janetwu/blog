@@ -3,19 +3,44 @@ layout: default
 ---
 {% assign post = site.posts.first %}
 {% assign content = post.content %}
+{% for post in site.posts %}
+  {% if post.sticky %}
+      {% assign post = post %}
+      {% assign content = post.content %}
+      {% break %}
+  {% endif %}
+{% endfor %}
 
 <article>
-  <a href="{{ post.url }}" class="post-title">{{ post.title }}</a>
-  <p class="post-meta">
-    <span class="post-date"><i class="fa fa-clock-o"></i> {{ post.date| date: "%Y-%m-%d" }}</span>
-    <span class="post-tags">
-      <i class="fa fa-tag"></i>
-      {% for tag in post.tags %}
-        <a href="/tags/#{{ tag }}">#{{ tag }}</a>
-      {% endfor %}
-    </span>
-  </p>
-  <div class="post-main">
-    {{ post.content }}
-  </div>
+  <h1><a href="{{ post.url }}">{{ post.title }}</a><span>
+    {% if post.sticky %}[置顶]
+      {% else %}
+      [最新]
+    {% endif %}
+  </span></h1>
+  <p class="meta"><time datetime='{{ post.date| date: "%Y-%m-%d" }}'><i class="fa fa-clock-o"></i>
+    {{ post.date| date: "%Y-%m-%d" }}</time>
+    <span><i class="fa fa-tag"></i></span>
+    {% for tag in post.tags %}
+      <a href="/tags/#{{ tag }}">#{{ tag }}</a>
+    {% endfor %}</p>
+  {% if post.image %}
+  <figure><img src="{{ post.image }}"></figure>
+  {% endif %}
+  {% if post.content contains "<!-- more -->" %}
+    {{ post.content | split:"<!-- more -->" | first % }}
+    <a class="readmore" href="{{ post.url }}">Read More <i class="fa fa-angle-double-right"></i></a>
+  {% else %}
+    {{ post.content | strip_html | truncatewords:100 }}
+  {% endif %}
+  
 </article>
+<nav>
+  <h1>Recent Posts</h1>
+  <ul>
+    {% for post in site.posts limit:5 %}
+    <li><time datetime='{{ post.date| date: "%Y-%m-%d" }}'>{{ post.date| date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
