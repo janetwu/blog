@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title> {% if page.title %} {{ page.title }} | {% endif %} Janet Wu </title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="author" content="janet wu">
+  <meta name="description" content="Hi - I'm Janet. I'm a web frontend developer.">
+  <link rel="shortcut icon" href="/img/favicon.ico" /> 
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/demo.css">
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.1/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header>
+    <div class="top boxed">
+      <h1><a href="/" title="Janet Wu"><img src="/img/logo.png" alt="Janet Wu"></a></h1>
+      <span class="slogon">less is more 越简单,越快乐</span>  
+      <nav>
+        <ul>
+          <li><a href="/archive/" title="Archive"><i class="fa fa-list-ul"></i></a></li>
+          <li><a href="/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
+          <!-- <li><a href="/books/" title="Books"><i class="fa fa-book"></i></a></li>
+          <li><a href="/" title="Photos"><i class="fa fa-camera"></i></a></li> -->
+          <li><a href="/about/" title="About"><i class="fa fa-user"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="main boxed">
+    
+      {{ content }}
+      
+  </div>
+  <footer class="boxed">
+    <span>© 2014 janet wu | powered by jekyll</span>
+    <a href="mailto:janetwume@gmail.com"><i class="fa fa-envelope"></i></a>
+    <a href="https://github.com/janetwu"><i class="fa fa-github"></i></a>
+  </footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51907563-1', 'janetwu.info');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+.full-width{
+	width: 100%;	
+	/*margin: 0 auto 24px;*/
+}
+.yeSlider{
+	width: 100%; 
+	height: 522px;
+	position: relative;
+	overflow: hidden;
+}
+#full-width-slider{
+	width: 100%;
+}
+.yeOverflow{
+	background-color: #666;
+	overflow: hidden;
+	position: relative;
+}
+.yeSlide {
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.yeSlide .yeImg{
+	position: relative; 
+	left: 50%;
+}
+.yeFade{
+	z-index: 0;  opacity: 0; position: absolute;  left: 0; top: 0; display: none;
+}
+.yeFade.yeHere{
+	display: block; opacity: 1; z-index: 1;
+}
+.yePreloader {
+	background-image: url("../images/preloader.gif");
+	height: 20px;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: -10px;
+	top: 50%;
+	width: 20px;
+}
+.yePreloader {
+	position: absolute;
+	z-index: 0;
+}
+.yeContainer{
+	position: relative;
+	width : 100%;
+	height: 100%;
+}
+.yeArrow{
+	position: absolute;
+	background: url('../images/default-ui.png') no-repeat 0 0;
+	width: 50px;
+	height: 50px;
+	top: 50%;
+	margin-top: -25px;
+	cursor: pointer;
+	z-index: 99999;
+}
+.yeArrow:hover, .yeArrow:focus{
+	background: url('../images/default-ui.png') no-repeat 0 0;
+}
+.yeArrow.yeArrowLeft{
+	left: 5px;
+	background-position: 0 -150px;
+}
+.yeArrow.yeArrowRight{
+	right: 5px;
+	background-position: 0 -50px;
+}
+.yeHidden{
+	display: none;
+}
+.yeABlock{
+	position: absolute;
+	top: 100px;
+	display: block;
+	left: 0;
+}
+.yeTimer{
+	width: 0;
+	height: 5px;
+	position: absolute;
+	background: url('../images/timer.png') repeat 0 0 transparent;
+	top: 0;
+	z-index: 999;
+	left: 0;
+}
+.yeBulletContainer{
+	position: absolute;
+	bottom: 20px;
+	z-index: 999;
+	left: 50%;
+	padding: 0;
+}
+.yeBulletContainer.yeBulletOutside{
+	position: relative;	
+	bottom: 0px;
+	padding-top: 10px;
+}
+.yeBullet{
+	width: 23px;
+	height: 23px;
+	background: url('../images/default-ui.png') no-repeat 0 -230px  transparent;
+	float: left;
+	margin-right: 8px;
+	cursor: pointer;
+	margin-left: 0;
+}
+.yeBulletHere{
+	background: url('../images/default-ui.png') no-repeat 0 -254px  transparent;
+	cursor: default;
+}
+.yeThumbsOverflow{
+	
+	
+	z-index: 999;
+	width: 60%;
+	overflow: hidden;
+	
+	background-color: #fff;	
+}
+.yeThumbsOverflow.yeThumbsInside{
+	position: absolute;
+	left: 50%;
+	bottom: 20px;
+}
+.yeThumbsOverflow.yeThumbsOutside{
+	position: relative;
+	left: 50%;
+}
+.yeThumb{
+	width: 160px;
+	height: 80px;
+	float: left;
+	cursor: pointer;
+	
+}
+.yeThumb img{
+	width: 100%;
+	height: 100%;
+}
+.yeVideoPlayBtn{
+	width: 95px;
+	height: 95px;
+	position: absolute;
+	left: 50%;
+	top:50%;
+	background: url('../images/videoPlay.png') no-repeat 0 0 transparent;
+	cursor: pointer;
+	margin: -47.5px 0 0 -47.5px;
+}
+.yeVideoContent .yeImg{
+	
+}
+.yeVideoHolder{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+.yeVideoHolder iframe{
+	position: absolute; 
+	z-index: 0;
+	top: 0;
+	left: 0;
+}
+.yeVideoClose{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	right: 20px;
+	top:20px;
+	background: url('../images/videoClose.png') no-repeat 0 0 transparent;
+	cursor: pointer;
+	z-index: 9999;
+}
+.ye_caption_video{
+	background-color: #000;
+}
+.ye_caption_video img{
+	width: 100%;
+	height: 100%;
+}
+.ye_caption_vedioPlayBtn{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: url('../images/videoPlay.png') no-repeat 0 0 transparent;
+	width: 95px;
+	height: 95px;
+	margin-top: -47.5px;
+	margin-left: -47.5px;
+	cursor: pointer;
+}
+.yeContent .ye_caption_img, .yeContent .ye_caption_text, .yeContent .ye_caption_video, .yeContent .ye_caption_html{
+	display: none;
+}
+/*for html demo*/
+.yeCaption{
+	position: absolute;
+	z-index: 1000;
+	font-size: 18px;
+	white-space: pre-line;
+	
+	margin-top: -200px;
+}
+.demoCap1{
+	background: none;
+	color: #e1358d;
+}
+.demoCap2{
+	background: rgba(0,0,0,0.5);
+	color: #fff;
+}

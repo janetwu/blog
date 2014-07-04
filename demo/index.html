@@ -1,0 +1,48 @@
+---
+layout: demo
+---
+<div class="demo-wrapper">
+    <h1>slider</h1>
+    <h2>basic demo</h2>
+    <div class="full-width">
+      <div class="yeSlider">
+        <div class="yeContent">
+          <img class="yeImg" src="/img/back.jpg">
+          <img class="yeCaption ye_caption_img yeABlock" src="/img/hello.png" data-width="240" data-height="43" data-x="260" data-y="140"   move-easing="easeInSine" move-dir="Bottom" move-distance="100"  move-delay="0" move-speed="0.2"  move-opacity="100">
+          <div class="yeCaption ye_caption_text yeABlock demoCap1"  data-width="auto" data-height="auto" data-x="273" data-y="200" data-size="28" data-padding="5"  move-easing="easeInQuart" move-dir="Top" move-distance="100"  move-delay="0.4" move-speed="0.08"  move-opacity="100">爱生活，爱前端。
+          </div>
+        </div>
+
+        <div class="yeContent">
+          <img class="yeImg" src="/img/p02.jpg">
+          <div class="yeCaption ye_caption_text yeABlock demoCap2"  data-width="auto" data-height="auto" data-x="273" data-y="200" data-size="18" data-padding="5"  move-easing="easeInQuart" move-dir="Top" move-distance="100"  move-delay="0" move-speed="0.08"  move-opacity="100">这只是一个简单的示例。
+          </div>
+          <div class="yeCaption ye_caption_text yeABlock demoCap2"  data-width="auto" data-height="auto" data-x="273" data-y="240" data-size="18" data-padding="5"  move-easing="easeInQuart" move-dir="Top" move-distance="100"  move-delay="0.2" move-speed="0.08"  move-opacity="100">事实上，可以用它创建更炫的效果。
+          </div>
+          <div class="yeCaption ye_caption_text yeABlock demoCap2"  data-width="auto" data-height="auto" data-x="273" data-y="280" data-size="18" data-padding="5"  move-easing="easeInQuart" move-dir="Top" move-distance="100"  move-delay="0.4" move-speed="0.08"  move-opacity="100">就看你如何设计样式，设置动画属性。
+          </div>
+        </div>
+        <div class="yeContent">
+          <img class="yeImg" src="/img/p03.jpg">
+          <div class="yeCaption ye_caption_text yeABlock demoCap2"  data-width="auto" data-height="auto" data-x="63" data-y="300" data-size="18" data-padding="5"  move-easing="easeInQuart" move-dir="Bottom" move-distance="100"  move-delay="0" move-speed="0.08"  move-opacity="100">当然，它还有bug，还有地方可以改善。
+          </div>
+          <div class="yeCaption ye_caption_text yeABlock demoCap2"  data-width="auto" data-height="auto" data-x="103" data-y="340" data-size="18" data-padding="5"  move-easing="easeInQuart" move-dir="Top" move-distance="100"  move-delay="0.2" move-speed="0.08"  move-opacity="100">想知多点？赶快联系我吧^_^
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="/js/jquery.textshadow.js"></script>
+<script type="text/javascript" src="/js/jquery.easing-1.3.js"></script>
+<script type="text/javascript" src="/js/demo.js"></script>
+<script language="javascript">
+	$(function(){
+		$('.yeSlider').yeSlider({
+			autoPlay: true,
+			delay: 5000
+		});
+	});
+</script>
+
+ 
