@@ -9,7 +9,7 @@ tags: jekyll
 <ul>
 	<li>文章评论功能</li>
 	<li>标签云tag cloud</li>
-	<li>代码高亮hightlight</li>
+	<li>代码高亮highlight</li>
 	<li>文章read more功能</li>
 	<li>首页文章置顶</li>
 </ul>
