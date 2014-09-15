@@ -214,3 +214,15 @@ footer {
 pre{
 	padding: 10px;
 }
+footer > a:first-child{
+	margin-left: 2px;
+}
+a[title="twitter"]:hover{
+	color: #0084B4;
+}
+a[title^="mail"]:hover{
+	color: #d14836;
+}
+a[title="github"]:hover{
+	color: #333;
+}
