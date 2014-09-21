@@ -33,7 +33,7 @@
   <div class="main boxed">
     
       <article>
-  <h1><a href="">阳朔</a></h1>
+  <h1>阳朔</h1>
   <p class="meta">
     <time datetime=''><i class="fa fa-clock-o"></i>
     2013-06-17</time>
@@ -69,26 +69,26 @@
     $('img.lazy').lazyload({
         effect : "fadeIn"
     });
-    // hide #back-top first
-    $("#scrolltop").hide();
     
-    // fade in #back-top
-    $(function () {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('#scrolltop').fadeIn();
-        } else {
-          $('#scrolltop').fadeOut();
-        }
-      });
-
-      // scroll body to 0px on click
-      $('#scrolltop').click(function () {
-        $('body,html').animate({
-          scrollTop: 0
-        }, 800);
-        return false;
-      });
+    var $scrolltopBtn = $('#scrolltop'),
+        _timeoutId;
+    $(window).scroll(function () {
+      if(_timeoutId){
+        clearTimeout(_timeoutId);
+      }
+      _timeoutId =  setTimeout(function(){
+          if ($(this).scrollTop() > 100) {
+            $scrolltopBtn.fadeIn();
+          } else {
+            $scrolltopBtn.fadeOut();
+          }
+        }, 100);
+    });
+    $scrolltopBtn.click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>
@@ -108,9 +108,9 @@
       
   </div>
   <a id="scrolltop">
-    <div class="icon">
-      <span class="upArrow"></span>
-    </div>
+    <span class="icon">
+      <i class="upArrow"></i>
+    </span>
   </a>
   <footer class="boxed">
     <span>© 2014 janet wu | powered by jekyll</span>

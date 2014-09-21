@@ -240,7 +240,7 @@ a[title="github"]:hover {
 #scrolltop:hover{
 	background-color: rgba(225,53,141,0.8);
 }
-div.icon {
+span.icon {
 	height: 32px;
 	width: 32px;
 	position: relative;
@@ -248,7 +248,7 @@ div.icon {
 	overflow: hidden;
 	display: inline-block;
 }
-span.upArrow {
+i.upArrow {
 	height: 0px;
 	width: 0px;
 	border-width: 16px;
@@ -258,7 +258,7 @@ span.upArrow {
 	bottom: 16px;
 	left: 0;
 }
-span.upArrow:after {
+i.upArrow:after {
 	content: '';
 	width: 12px;
 	height: 16px;

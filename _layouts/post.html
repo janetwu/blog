@@ -3,7 +3,7 @@ layout: default
 ---
 
 <article>
-  <h1><a href="{{ post.url }}">{{ page.title }}</a></h1>
+  <h1>{{ page.title }}</h1>
   <p class="meta">
     <time datetime='{{ post.date| date: "%Y-%m-%d" }}'><i class="fa fa-clock-o"></i>
     {{ page.date| date: "%Y-%m-%d" }}</time>
@@ -39,26 +39,26 @@ layout: default
     $('img.lazy').lazyload({
         effect : "fadeIn"
     });
-    // hide #back-top first
-    $("#scrolltop").hide();
     
-    // fade in #back-top
-    $(function () {
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-          $('#scrolltop').fadeIn();
-        } else {
-          $('#scrolltop').fadeOut();
-        }
-      });
-
-      // scroll body to 0px on click
-      $('#scrolltop').click(function () {
-        $('body,html').animate({
-          scrollTop: 0
-        }, 800);
-        return false;
-      });
+    var $scrolltopBtn = $('#scrolltop'),
+        _timeoutId;
+    $(window).scroll(function () {
+      if(_timeoutId){
+        clearTimeout(_timeoutId);
+      }
+      _timeoutId =  setTimeout(function(){
+          if ($(this).scrollTop() > 100) {
+            $scrolltopBtn.fadeIn();
+          } else {
+            $scrolltopBtn.fadeOut();
+          }
+        }, 100);
+    });
+    $scrolltopBtn.click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
     });
   });
 </script>
