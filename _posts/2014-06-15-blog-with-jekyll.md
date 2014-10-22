@@ -19,7 +19,7 @@ tags: jekyll
 <p>最后文章置顶功能，是找也找不到，唯有自己想办法解决。</p>
 <p>既然头信息可以创建自定义变量，那可不可以通过创建一个变量来识别是否是篇需要置顶的文章呢？</p>
 <p>在我想置顶的文章头部增加一个变量sticky，通过它来标志这是否是篇想要置顶的文章。</p>
-{% highlight text linenos%}
+{% highlight text %}
 ---
 layout: post
 image: /img/yunnan/
@@ -29,7 +29,7 @@ sticky: true
 ---
 {% endhighlight %}
 <p>在首页，我通过变量sticky来拿到post。</p>
-{% highlight text linenos%}
+{% highlight text %}
 {% raw %}
 {% assign post = site.posts.first %}
 {% assign content = post.content %}
