@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>  Janet Wu </title>
+  <title>  你好，四月 |  Janet Wu </title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="author" content="janet wu">
   <meta name="description" content="Hi - I'm Janet. I'm a web frontend developer.">
@@ -33,122 +33,67 @@
   <div class="main boxed">
     
       <article>
-    <h1>Archive</h1>
-    <nav class="archive-list">
+  <h1>你好，四月</h1>
+  <p class="meta">
+    <time datetime=''><i class="fa fa-clock-o"></i>
+    2015-04-02</time>
+    <span><i class="fa fa-tag"></i></span>
     
-        
-        
-        
-        
-
-        
-        <h2>2015</h2>
-        <h3>4月</h3>
-        <ul>
-        
-
-        <li><a href="/2015/04/02/hello-april.html">你好，四月</a></li>
-
-        
-            
-            </ul>
-            <h2>2014</h2>
-            <h3>10月</h3>
-            <ul>
-            
-        
-    
-        
-        
-        
-        
-
-        
-
-        <li><a href="/2014/10/22/mai-li-hao-jing.html">麦里浩径徒步</a></li>
-
-        
-                
-                
-                </ul>
-                <h3>9月</h3>
-                <ul>
-                
-            
-        
-    
-        
-        
-        
-        
-
-        
-
-        <li><a href="/2014/09/21/scroll-to-top-jquery.html">jQuery页面返回顶部效果实现</a></li>
-
-        
-                
-                
-                </ul>
-                <h3>6月</h3>
-                <ul>
-                
-            
-        
-    
-        
-        
-        
-        
-
-        
-
-        <li><a href="/2014/06/15/blog-with-jekyll.html">用jekyll搭建博客</a></li>
-
-        
-                
-                
-                </ul>
-                <h3>1月</h3>
-                <ul>
-                
-            
-        
-    
-        
-        
-        
-        
-
-        
-
-        <li><a href="/2014/01/07/happy-new-year-in-yunnan.html">云南跨年游</a></li>
-
-        
-            
-            </ul>
-            <h2>2013</h2>
-            <h3>6月</h3>
-            <ul>
-            
-        
-    
-        
-        
-        
-        
-
-        
-
-        <li><a href="/2013/06/17/yangshuo.html">阳朔</a></li>
-
-        
-        </ul>
-        
-    
-    </nav>
-
+      <a href="/tags/#mood">#mood</a>
+    </p>
+  
+  <p>公司在华侨城，中午小伙伴们一起来个周边小徒步。</p><figure><p>无处不在的勒杜鹃，在这个季节，为这座城市增添不少色彩。</p>
+<img class='lazy' src='/img/20150402/img02.jpg' /></figure>
 </article>
+<div class="divider clearfix">
+  
+ 
+    <a class="prev" href="/2014/10/22/mai-li-hao-jing.html" title="麦里浩径徒步"><i class="fa fa-arrow-left"></i> 麦里浩径徒步</a>
+  
+  
+  
+  
+</div>
+<div id="disqus_thread"></div>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script>
+  $(function(){
+    
+    var $scrolltopBtn = $('#scrolltop'),
+        _timeoutId;
+    $(window).scroll(function () {
+      if(_timeoutId){
+        clearTimeout(_timeoutId);
+      }
+      _timeoutId =  setTimeout(function(){
+          if ($(this).scrollTop() > 100) {
+            $scrolltopBtn.fadeIn();
+          } else {
+            $scrolltopBtn.fadeOut();
+          }
+        }, 100);
+    });
+    $scrolltopBtn.click(function () {
+      $('body,html').animate({
+        scrollTop: 0
+      }, 800);
+      return false;
+    });
+  });
+</script>
+<script type="text/javascript">
+  var disqus_shortname = 'janetwu';
+  window.onload = function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    
+  }
+</script>
+
+
 
 
       
