@@ -9,30 +9,30 @@ layout: default
     {{ page.date| date: "%Y-%m-%d" }}</time>
     <span><i class="fa fa-tag"></i></span>
     {% for tag in page.tags %}
-      <a href="/tags/#{{ tag }}">#{{ tag }}</a>
+      <a href="{{ site.baseurl }}/tags/#{{ tag }}">#{{ tag }}</a>
     {% endfor %}</p>
   {% if page.image %}
-  <figure><img src="{{ page.image }}"></figure>
+  <figure><img src="{{ site.baseurl }}{{ page.image }}"></figure>
   {% endif %}
   {{ content }}
 </article>
 <div class="divider clearfix">
   {% if page.previous %}
  
-    <a class="prev" href="{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-arrow-left"></i> {{ page.previous.title }}</a>
+    <a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-arrow-left"></i> {{ page.previous.title }}</a>
   
   {% endif %}
   
   {% if page.next %}
   
-    <a class="next" href="{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} <i class="fa fa-arrow-right"></i></a>
+    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} <i class="fa fa-arrow-right"></i></a>
  
   {% endif %}
 </div>
 <div id="disqus_thread"></div>
 
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery-1.9.1.min.js"></script>
 <script>
   $(function(){
     
