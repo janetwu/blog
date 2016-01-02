@@ -6,10 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="author" content="janet wu">
   <meta name="description" content="Hi - I'm Janet. I'm a web frontend developer.">
-  <link rel="shortcut icon" href="/img/favicon.ico" /> 
-  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="/css/syntax.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/favicon.ico" /> 
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css">
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.1/html5shiv.min.js"></script>
@@ -19,13 +19,13 @@
 <body>
   <header>
     <div class="top boxed">
-      <h1><a href="/" title="Janet Wu"><img src="/img/logo.png" alt="Janet Wu"></a></h1>
+      <h1><a href="{{ site.baseurl }}/" title="Janet Wu"><img src="{{ site.baseurl }}/img/logo.png" alt="Janet Wu"></a></h1>
       <span class="slogon">less is more 越简单,越快乐</span>  
       <nav>
         <ul>
-          <li><a href="/archive/" title="Archive"><i class="fa fa-list-ul"></i></a></li>
-          <li><a href="/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
-          <li><a href="/about/" title="About"><i class="fa fa-user"></i></a></li>
+          <li><a href="{{ site.baseurl }}/archive/" title="Archive"><i class="fa fa-list-ul"></i></a></li>
+          <li><a href="{{ site.baseurl }}/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
+          <li><a href="{{ site.baseurl }}/about/" title="About"><i class="fa fa-user"></i></a></li>
         </ul>
       </nav>
     </div>

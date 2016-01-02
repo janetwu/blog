@@ -17,7 +17,7 @@ layout: default
         
         <ul>
         {% for post in tag[1] %}
-          <li><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+          <li><a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
         {% endfor %}
         </ul>
         
@@ -27,8 +27,8 @@ layout: default
   </section>
 </article>
 
-<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery.tagcloud.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="{{ site.baseurl }}/js/jquery.tagcloud.js"></script>
 <script language="javascript">
 	$.fn.tagcloud.defaults = {
 	  size: {start: 0.9, end: 2, unit: 'em'},
