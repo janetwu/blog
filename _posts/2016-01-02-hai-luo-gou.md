@@ -9,7 +9,7 @@ tags: 海螺沟 travel
 <figure>
 	<p>有些人选择在最后一段距离徒步上山，但是大部分都是坐缆车直上，我属于大部分人。</p>
 	<img class="lazy" src="{{ site.baseurl }}/img/sichuan/hlg02.jpg" width="325">
-	<img class="lazy" src="/img/sichuan/hlg01.jpg" width="325">
+	<img class="lazy" src="{{ site.baseurl }}/img/sichuan/hlg01.jpg" width="325">
 </figure>
 <figure>
 	<p>幸运的是，天气还不错。虽然一到山顶，手指冻到失去知觉，但是看到眼前的这一幕壮观景色，使得这一路上的颠簸都是值得的。</p>
@@ -19,7 +19,7 @@ tags: 海螺沟 travel
 <figure>
 	<p>下午我们在二号营地泡温泉，温泉不远处的欧式房子让人误以为走进了童话世界，雾气环绕，仿佛仙境。</p>
 	<img class="lazy" src="{{ site.baseurl }}/img/sichuan/hlg05.jpg" width="325">
-	<img class="lazy" src="/img/sichuan/hlg06.jpg" width="325">
+	<img class="lazy" src="{{ site.baseurl }}/img/sichuan/hlg06.jpg" width="325">
 </figure>
 <figure>
 	<p>冰川游玩后的第二天我们去了磨西镇附近的红石滩和雅家情海，可惜的是，等我们上到情海，天空已灰蒙蒙一片，与结成冰的情海，倒像是融合在了一起。</p>
