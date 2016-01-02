@@ -12,25 +12,22 @@ layout: default
         {% capture next_month %}{{ post.previous.date | date: "%-m" }}{% endcapture %}
 
         {% if forloop.first %}
-        <h2>{{this_year}}</h2>
-        <h3>{{ this_month }}月</h3>
+        <h2 class="year"><span class="num">{{this_year}}</span></h2>
         <ul>
         {% endif %}
 
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%m/%d" }}</span>{{ post.title }}</a></li>
 
         {% if forloop.last %}
         </ul>
         {% else %}
             {% if this_year != next_year %}
             </ul>
-            <h2>{{next_year}}</h2>
-            <h3>{{ next_month }}月</h3>
+            <h2 class="year"><span class="num">{{next_year}}</span></h2>
             <ul>
             {% else %}    
                 {% if this_month != next_month %}
                 </ul>
-                <h3>{{ next_month }}月</h3>
                 <ul>
                 {% endif %}
             {% endif %}

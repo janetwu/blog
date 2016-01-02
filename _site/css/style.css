@@ -105,9 +105,37 @@ header {
 .main h2 {
 	font-size: 18px;
 }
+.main h2.year{
+	font-size: 16px;
+	position: relative;
+	height: 24px;
+}
+h2.year:after {
+    content: '';
+    display: inline-block;
+    width: 70px;
+    height: 2px;
+    background-color: #eee;
+    position: absolute;
+    z-index: 99;
+    left: 0px;
+    top: 50%;
+    margin-top: -1px;
+}
+h2.year .num{
+	position: absolute;
+	background-color: #fff;
+	z-index: 100;
+	padding-right: 3px;
+	margin-left: 14px;
+	padding-left: 3px;
+}
 .main h3 {
 	font-size: 16px;
 	margin-bottom: 5px;
+}
+.main h3.month{
+
 }
 .main a:link, .main a:visited {
 	color: #666;
@@ -116,11 +144,21 @@ header {
 .main a:hover, .main a:active, .main a:focus {
 	color: #e1358d;
 }
+.main nav li .date{
+	color: #999;
+	margin-right: 8px;
+}
 article h1 span {
 	font-size: 13px;
 }
 article p, article figure {
 	margin: 8px 0;
+}
+article figure{
+	text-align: center;
+}
+article p{
+	text-align: left;
 }
 article .meta {
 	font-size: 12px;
