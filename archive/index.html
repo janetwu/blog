@@ -16,7 +16,7 @@ layout: default
         <ul>
         {% endif %}
 
-        <li><a href="{{ post.url }}"><span class="date">{{ post.date | date: "%m/%d" }}</span>{{ post.title }}</a></li>
+        <li><a href="/blog{{ post.url }}"><span class="date">{{ post.date | date: "%m/%d" }}</span>{{ post.title }}</a></li>
 
         {% if forloop.last %}
         </ul>
