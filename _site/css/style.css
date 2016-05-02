@@ -249,6 +249,7 @@ footer {
 pre {
 	padding: 0px;
 	margin: 0px;
+	text-align: left;
 }
 footer > a:first-child {
 	margin-left: 2px;
