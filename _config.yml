@@ -1,2 +1,7 @@
 highlighter: true,
 baseurl: "/blog"
+
+highlighter: rouge
+
+kramdown:
+  syntax_highlighter: rouge

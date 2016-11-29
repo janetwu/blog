@@ -1,11 +1,12 @@
-/* author: janetwu;
-*/
 body {
 	margin: 0;
 	font-family: "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
 	font-size: 14px;
 	line-height: 1.5;
 	color: #666;
+	display: flex;
+	flex-direction: column;
+    height: 100vh;
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -43,8 +44,14 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 500;
-	color: #666;
+	color: #333;
 	margin: 10px 0;
+}
+h1 a{
+	color: #333;
+}
+p{
+	margin: 5px 0px;
 }
 .clearfix:before, .clearfix:after, header:before, header:after, nav:before, nav:after {
 	content: '';
@@ -95,17 +102,47 @@ header {
 	width: 1em;
 	margin-left: 1.5em;
 }
-.main {
+main.boxed {
+	margin-top: 30px;
 	margin-bottom: 30px;
+	flex: 1;
+	position: relative;
 }
-.main h1 {
-	font-size: 20px;
+aside{
+	position: absolute;
+	top: 30px;
+	left: -180px;
+	text-align: right;
+}
+
+img.author-pic{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+img.author-pic:hover{
+	transform: scale(1.1);
+}
+
+.author-name{
+	color: #333;
+	font-size: 13px;
+}
+.author-op{
+	color: #929292;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.4;
+    font-style: italic;
+}
+main h1 {
+	font-size: 22px;
 	margin: 30px 0 3px;
 }
-.main h2 {
-	font-size: 18px;
+main h2 {
+	font-size: 20px;
 }
-.main h2.year{
+main h2.year{
 	font-size: 16px;
 	position: relative;
 	height: 24px;
@@ -130,29 +167,40 @@ h2.year .num{
 	margin-left: 14px;
 	padding-left: 3px;
 }
-.main h3 {
+main h3 {
 	font-size: 16px;
 	margin-bottom: 5px;
 }
-.main h3.month{
+main h3.month{
 
 }
-.main a:link, .main a:visited {
-	color: #666;
-	text-decoration: none;
+main a:link, main a:visited {
+	color: #333;
 }
-.main a:hover, .main a:active, .main a:focus {
+main a:hover, main a:active, main a:focus {
 	color: #e1358d;
 }
-.main nav li .date{
+h1 a:link, h1 a:visited {
+	color: #333;
+	text-decoration: none;
+}
+h1 a:hover, h1 a:active, h1 a:focus {
+	color: #e1358d;
+}
+main nav li .date{
 	color: #999;
 	margin-right: 8px;
+}
+article{
+	font-size: 15px;
+	letter-spacing: 1px;
 }
 article h1 span {
 	font-size: 13px;
 }
 article p, article figure {
-	margin: 8px 0;
+	margin: 20px 0;
+	line-height: 1.8;
 }
 article figure{
 	text-align: center;
@@ -168,14 +216,14 @@ figure img {
 	max-width: 100%;
 	border-radius: 4px;
 }
-.main nav li {
-	line-height: 1.5em;
-	margin-left: 20px;
+main nav li {
+	line-height: 1.6;
+	/* margin-left: 20px; */
 }
-.main nav li a {
-	margin-left: 10px;
+main nav li a {
+	margin-left: 5px;
 }
-.main nav time {
+main nav time {
 	color: #999;
 }
 footer {
@@ -237,6 +285,7 @@ footer {
 		text-align: center;
 	}
 }
+
 .divider {
 	margin: 30px 0;
 }
@@ -254,14 +303,14 @@ pre {
 footer > a:first-child {
 	margin-left: 2px;
 }
-a[title="twitter"]:hover {
-	color: #0084B4;
+a[title="twitter"]:hover .icon{
+	fill: #0084B4;
 }
-a[title^="mail"]:hover {
-	color: #d14836;
+a[title^="mail"]:hover .icon{
+	fill: #d14836;
 }
-a[title="github"]:hover {
-	color: #333;
+a[title="github"]:hover .icon{
+	fill: #333;
 }
 #scrolltop{
 	display: none;
@@ -305,4 +354,105 @@ i.upArrow:after {
 	position: absolute;
 	top: 16px;
 	right: -6px;
+}
+
+pre {
+    background: #f9f9fa;
+    border: 1px solid rgba(51,51,51,.1);
+    margin-bottom: 32px;
+    padding: 10px;
+}
+code{
+	font-family: "Helvetica Neue",Arial,'microsoft yahei',sans-serif;
+	font-size: 14px;
+}
+ul.social-list{
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 14px;
+	color: inherit;
+}
+.social-list li{
+	display: inline-block;
+	margin-left: 10px;
+}
+svg.icon{
+	width: 1em;
+	height: 1em;
+	fill: #999;
+	vertical-align: middle;
+	-webkit-transition: fill 0.5s ease;
+    -moz-transition: fill 0.5s ease;
+    -o-transition: fill 0.5s ease;
+    transition: fill 0.5s ease;
+}
+.saying{
+	margin-top: 60px;
+    font-size: 13px;
+    color: #929292;
+    font-style: italic;
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 10px 0;
+}
+nav.main{
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 10px;
+}
+a:hover .icon{
+	fill: #e1358d;
+}
+nav.main li{
+	display: inline-block;
+	margin-left: 5px;
+}
+article p a:link, article p a:visited{
+	font-style: italic;
+}
+footer.boxed{
+	padding: 10px;
+	margin-bottom: 20px;
+}
+@media(max-width: 1020px) {
+	body{
+		height: 100%;
+	}
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+	main.boxed{
+		margin-top: 20px;
+	}
+	main aside{
+		order: 0;
+		position: static;
+		text-align: center;
+	}
+	main aside nav{
+		position: absolute;
+		right: 20px;
+		top: 0px;
+	}
+	main article{
+		order: 1;
+	}
+	main>nav{
+		order: 1;
+	}
+	.saying{
+		margin-top: 10px;
+	}
+	footer.boxed{
+		padding: 10px;
+	}
+	.divider{
+		order: 4;
+	}
+	#disqus_thread{
+		order: 5;
+	}
 }

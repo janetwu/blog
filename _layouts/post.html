@@ -5,9 +5,9 @@ layout: default
 <article>
   <h1>{{ page.title }}</h1>
   <p class="meta">
-    <time datetime='{{ post.date| date: "%Y-%m-%d" }}'><i class="fa fa-clock-o"></i>
+    <time datetime='{{ post.date| date: "%Y-%m-%d" }}'><svg class="icon icon-clock"><use xlink:href="#icon-clock"></use></svg>
     {{ page.date| date: "%Y-%m-%d" }}</time>
-    <span><i class="fa fa-tag"></i></span>
+    <span><svg class="icon icon-price-tags"><use xlink:href="#icon-price-tags"></use></svg></span>
     {% for tag in page.tags %}
       <a href="{{ site.baseurl }}/tags/#{{ tag }}">#{{ tag }}</a>
     {% endfor %}</p>
@@ -19,13 +19,13 @@ layout: default
 <div class="divider clearfix">
   {% if page.previous %}
  
-    <a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}"><i class="fa fa-arrow-left"></i> {{ page.previous.title }}</a>
+    <a class="prev" href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}"> &#8678; {{ page.previous.title }}</a>
   
   {% endif %}
   
   {% if page.next %}
   
-    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} <i class="fa fa-arrow-right"></i></a>
+    <a class="next" href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &#8680; </a>
  
   {% endif %}
 </div>
