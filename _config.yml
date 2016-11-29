@@ -5,3 +5,7 @@ highlighter: rouge
 
 kramdown:
   syntax_highlighter: rouge
+
+gems:
+  - jekyll-seo-tag
+
