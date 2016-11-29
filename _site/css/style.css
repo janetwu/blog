@@ -446,6 +446,9 @@ footer.boxed{
 	.saying{
 		margin-top: 10px;
 	}
+	.saying br{
+		display: none;
+	}
 	footer.boxed{
 		padding: 10px;
 	}
