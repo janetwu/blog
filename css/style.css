@@ -462,3 +462,8 @@ footer.boxed{
 .highlight{
 	line-height: 1.4;
 }
+@media(max-height: 845px) {
+	body{
+		height: 100%;
+	}
+}
