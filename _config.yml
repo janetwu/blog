@@ -1,5 +1,5 @@
 highlighter: true,
-baseurl: "/blog"
+baseurl: ""
 
 highlighter: rouge
 
